@@ -103,23 +103,33 @@ const Navbar = (props: any) => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
+                {...props}
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem {...props} as={Link}>
+                    About
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem {...props} as={Link}>
+                    Works
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
+                  <MenuItem {...props} as={Link}>
+                    Projects
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/skills" passHref>
-                  <MenuItem as={Link}>Skills</MenuItem>
+                  <MenuItem {...props} as={Link}>
+                    Skills
+                  </MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"
+                  {...props}
                 >
                   View Source
                 </MenuItem>
