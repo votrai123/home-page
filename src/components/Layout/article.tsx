@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import { ReactNode } from 'react';
 import { GridItemStyle } from '../gridItem';
+
+interface IProps {
+  title: string;
+  children: ReactNode;
+}
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -8,7 +14,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 }
 };
 
-const Layout = ({ children, title }: any) => {
+const Layout = ({ children, title }: IProps) => {
   const t = `${title} - Nguyen Vo Trai`;
   return (
     <motion.article

@@ -1,16 +1,23 @@
 import { Box, Container } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import { Router } from 'next/router';
+import { ReactNode } from 'react';
 import Footer from '../footer';
 import Navbar from '../Navbar';
 import Loader from '../voxelMacLoader';
+
+interface IProps {
+  children?: ReactNode;
+  router?: Router;
+}
 
 const LazyVoxelMac = dynamic(() => import('../voxelMac'), {
   ssr: false,
   loading: () => <Loader />
 });
 
-const Main = ({ children, router }: any) => {
+const Main = ({ children, router }: IProps) => {
   return (
     <Box as={'main'} pb={8}>
       <Head>
@@ -37,7 +44,7 @@ const Main = ({ children, router }: any) => {
           content="https://res.cloudinary.com/dktnzckto/image/upload/v1661405113/homepage/IMG_2538_oucmof.jpg"
         />
       </Head>
-      <Navbar path={router?.path} />
+      <Navbar path={router?.pathname} />
       <Container maxW={'container.md'} pt={14}>
         <LazyVoxelMac />
 

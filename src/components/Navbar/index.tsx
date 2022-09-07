@@ -25,8 +25,8 @@ const LinkItem = ({ href, path, target, children, ...props }: any) => {
     <NextLink href={href} passHref scroll={false}>
       <Link
         p={2}
-        color={active ? '#202023' : inactiveColor}
         bg={active ? 'grassTeal' : undefined}
+        color={active ? '#201020' : inactiveColor}
         target={target}
         {...props}
       >
@@ -44,7 +44,7 @@ const Navbar = (props: any) => {
       position={'fixed'}
       as={'nav'}
       w={'100%'}
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={useColorModeValue('#ffffff9', '#20202308')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       {...props}
@@ -81,7 +81,7 @@ const Navbar = (props: any) => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/votrai123/dotfiles-privated"
+            href="https://github.com/votrai123/home-page"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -128,7 +128,7 @@ const Navbar = (props: any) => {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/votrai123/home-page"
                   {...props}
                 >
                   View Source
