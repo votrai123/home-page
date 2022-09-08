@@ -21,7 +21,7 @@ const handExitComplete = (): void => {
           // Smooth scroll to that elment
           element.scrollIntoView({
             behavior: 'smooth',
-            block: 'start',
+            block: 'center',
             inline: 'nearest'
           });
         }
