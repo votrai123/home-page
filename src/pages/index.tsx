@@ -5,10 +5,15 @@ import {
   chakra,
   Container,
   Heading,
+  ListItem,
+  Text,
+  UnorderedList,
   useColorModeValue
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { IoIosTimer } from 'react-icons/io';
 import Section from '../components/section';
+import Paragraph from '../components/paragraph';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (props: any) =>
@@ -68,6 +73,46 @@ const Home: NextPage = () => {
           <Heading as={'h3'} variant={'section-title'}>
             Work
           </Heading>
+          <Paragraph>
+            I am a student at a University Of Information Technology and 2+
+            Years of experience in programming with knowledge of {<br />}
+            Object-oriented Programming, Information Systems, Development
+            Mobile. I hope to be able to help the company develop software with
+            the knowledge I already have. Willing to practice to learn and
+            accumulate more work experience, improve their professional
+            knowledge and capacity.
+          </Paragraph>
+          <UnorderedList>
+            <ListItem fontSize={16}>
+              2+ years of experience in programming with strong knowledge of
+              JavaScript ( ReactNative, ReactJS).
+            </ListItem>
+            <ListItem fontSize={16}>
+              2+ years of experience knowledge of React Hook
+            </ListItem>
+            <ListItem fontSize={16}>
+              1+ years as a technical lead with deep understanding of Mobile UX
+              and UI design paradigms, and ability to implement and design
+              Mobile apps.
+            </ListItem>
+          </UnorderedList>
+        </Section>
+
+        <Section delay={0.2}>
+          <Heading as={'h3'} variant={'section-title'}>
+            Education
+          </Heading>
+          <Text mt={2} fontSize={20} fontWeight={'bold'} flexDirection={'row'}>
+            University of information Technology – HCM city national University
+          </Text>
+          <Box alignItems={'baseline'} display={'flex'}>
+            <Box ps={2} pe={2}>
+              <IoIosTimer />
+            </Box>
+            <Text fontStyle={'italic'} verticalAlign={'center'} fontSize={'18'}>
+              2017 - Now
+            </Text>
+          </Box>
         </Section>
       </Container>
     </Layout>

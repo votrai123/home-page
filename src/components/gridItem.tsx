@@ -94,12 +94,13 @@ export const WorkGridItem = ({
 );
 
 interface IPropProject {
-  teamSize: number;
+  teamSize?: number;
   summary: string;
-  position: string;
+  position?: string;
   listTechs: Array<string>;
   name: string;
-  flag: ReactNode;
+  flag?: ReactNode;
+  mainLib: string;
 }
 
 export const ProjectGridItem = ({
@@ -108,21 +109,24 @@ export const ProjectGridItem = ({
   position,
   summary,
   listTechs,
-  flag
+  flag,
+  mainLib
 }: IPropProject) => {
   return (
     <Box w={'100%'} pt={4}>
       <Heading display={'flex'} as={'h5'} fontSize={20}>
-        {name} {flag}
+        {name} {!!flag && flag}
       </Heading>
       <Grid my={4} templateColumns="repeat(5, 1fr)" gap={4}>
         <GridItem colSpan={2}>
-          <Text>Team size</Text>
-          <Text>Position</Text>
+          {!!teamSize && <Text fontStyle={'oblique'}>Team size</Text>}
+          {!!teamSize && <Text fontStyle={'oblique'}>Position</Text>}
+          <Text fontStyle={'oblique'}>Main Lib</Text>
         </GridItem>
         <GridItem colStart={4} colEnd={6}>
-          <Text>{teamSize}</Text>
-          <Text>{position}</Text>
+          {!!teamSize && <Text>{teamSize}</Text>}
+          {!!teamSize && <Text>{position}</Text>}
+          <Text>{mainLib}</Text>
         </GridItem>
       </Grid>
       <Text fontStyle={'italic'} fontSize={16}>
