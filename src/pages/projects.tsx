@@ -18,6 +18,40 @@ const Projects = () => {
           <Divider variant={'dashed'} />
           <ProjectGridItem
             mainLib={'React Native'}
+            summary={`Management system project for Sun`}
+            name={'SGR PAPERLESS'}
+            teamSize={210}
+            position={'Member'}
+            flag={<Flag country={'VN'} size={20} />}
+            listTechs={[
+              'Redux, Redux Saga',
+              'HTTP Request (Restful API)',
+              'Animations',
+              'Notifications',
+              'Formik',
+              'Multi-languages',
+              'Integrate Multi-App React Native'
+            ]}
+          />
+          <ProjectGridItem
+            mainLib={'React Native'}
+            summary={`FPT will perform a full-service software development firm to develop the Pantura mobile app which utilizes the Floow’s SDK, and the back-end system that is related to the mobile app, and the possible system integration that can happen with the Pantura back-end system.`}
+            name={'Mucar'}
+            teamSize={51}
+            position={'Member'}
+            flag={<Flag country={'DE'} size={20} />}
+            listTechs={[
+              'Redux, Redux Saga',
+              'HTTP Request (Restful API)',
+              'Animations',
+              'Notifications',
+              'Formik',
+              'Multi-languages',
+              'Native modules for Android/IOS'
+            ]}
+          />
+          <ProjectGridItem
+            mainLib={'React Native'}
             summary={`Develop a loyalty mobile application for Takashimaya's shopping malls in Singapore`}
             name={'G-MallApp'}
             teamSize={34}
